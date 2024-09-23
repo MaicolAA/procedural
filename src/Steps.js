@@ -1,50 +1,99 @@
 export const Steps = [
     {
-        question: '¿Cuál es tu color favorito?',
+        question: 'Cuenta con Scanner que Permita comprobaciones activas?',
         options: {
-            Rojo: {
-                question: '¿Por qué te gusta el rojo?',
+            Si: {
+                question: 'Presenta código de fallo de encendido en 1 o más cilindros?',
                 options: {
-                    'Es llamativo': {
-                        question: '¿Qué te atrae de lo llamativo?',
+                    'En 1 cilindro': {
+                        question: 'Se replicó en el mismo cilindro o cambio junto al cilindro que se intercambio la bobina?',
                         options: {
-                            'Es único': {
-                                question: '¿Qué te atrae de lo único?',
+                            'En el mismo': {
+                                question: 'El fallo se paso de cilindro?',
                                 options: {
-                                    'Es divertido': {
-                                        question: '¿Qué te atrae de lo divertido?',
+                                    'Si': {
+                                        finalSolution: 'Se deben reemplazar las bujías de todos los cilindros por unas nuevas de buena calidad y calibrar los electrodos',
+                                    },
+                                    'No': {
+                                        finalSolution: 'Se procede a verificar el estado de los inyectores y se debe medir la compresión y estanqueidad de los cilindros. Comprobaciones adicionales necesarias con herramientas especiales',
+                                    },
+                                },
+                            },
+                            'En el que se intercambio': {
+                                finalSolution: 'Remplazar el cilindro con fallo en la misma bobina',
+                            },
+                        },
+                    },
+                    'En más de 1 cilindro': {
+                        question: 'El fallo se replico en los cilindros intercambiados?',
+                        options: {
+                            'Si': {
+                                finalSolution: 'Remplazar los cilindros con fallos, por cilindro nuevos de buena calidad',
+                            },
+                            'No': {
+                                question: 'El fallo se sigue presentando en los cilindro inicales?',
+                                options: {
+                                    'Si': {
+                                        finalSolution: 'Se deben reemplazar las bujías de todos los cilindros por unas nuevas de buena calidad y calibrar los electrodos',
+                                    },
+                                    'No': {
+                                        finalSolution: 'Se procede a verificar el estado de los inyectores y se debe medir la compresión y estanqueidad de los cilindros. Comprobaciones adicionales necesarias con herramientas especiales',
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+            No: {
+                question: 'Cuenta con lector de codigos?',
+                options: {
+                    'Si': {
+                        question: 'Presenta código de fallo de encendido en 1 o más cilindros?',
+                        options: {
+                            'En 1 cilindro': {
+                                question: 'Se replicó en el mismo cilindro o cambio junto al cilindro que se intercambio la bobina?',
+                                options: {
+                                    'En el mismo': {
+                                        question: 'El fallo se paso de cilindro?',
                                         options: {
-                                            'Es divertido': null,
-                                            'Es inteligente': null,
+                                            'Si': {
+                                                finalSolution: 'Se deben reemplazar las bujías de todos los cilindros por unas nuevas de buena calidad y calibrar los electrodos',
+                                            },
+                                            'No': {
+                                                finalSolution: 'Se procede a verificar el estado de los inyectores y se debe medir la compresión y estanqueidad de los cilindros. Comprobaciones adicionales necesarias con herramientas especiales',
+                                            },
                                         },
                                     },
-                                    'Es inteligente': {
-                                        question: '¿Qué te atrae de lo inteligente?',
+                                    'En el que se intercambio': {
+                                        finalSolution: 'Remplazar el cilindro con fallo en la misma bobina',
+                                    },
+                                },
+                            },
+                            'En más de 1 cilindro': {
+                                question: 'El fallo se replico en los cilindros intercambiados?',
+                                options: {
+                                    'Si': {
+                                        finalSolution: 'Remplazar los cilindros con fallos, por cilindro nuevos de buena calidad',
+                                    },
+                                    'No': {
+                                        question: 'El fallo se sigue presentando en los cilindro inicales?',
                                         options: {
-                                            'Es inteligente': null,
-                                            'Es divertido': null,
+                                            'Si': {
+                                                finalSolution: 'Se deben reemplazar las bujías de todos los cilindros por unas nuevas de buena calidad y calibrar los electrodos',
+                                            },
+                                            'No': {
+                                                finalSolution: 'Se procede a verificar el estado de los inyectores y se debe medir la compresión y estanqueidad de los cilindros. Comprobaciones adicionales necesarias con herramientas especiales',
+                                            },
                                         },
                                     },
                                 },
                             },
-                            'Es visible': null,
                         },
                     },
-                    'Es apasionante': null,
-                },
-            },
-            Azul: {
-                question: '¿Por qué prefieres el azul?',
-                options: {
-                    'Es calmante': null,
-                    'Es confiable': null,
-                },
-            },
-            Verde: {
-                question: '¿Por qué te gusta el verde?',
-                options: {
-                    'Es natural': null,
-                    'Es fresco': null,
+                    'No': {
+                        finalMessage: 'Lo sentimos, no se puede comprobar la averia.',
+                    }
                 },
             },
         },
