@@ -19,6 +19,7 @@ const ExpertSystem = () => {
     if (nextStep) {
       if (nextStep.finalSolution) {
         setFinalSolution(nextStep.finalSolution);
+        console.log(JSON.stringify(answers));
       }
       else if (nextStep.finalMessage) {
         setFinalMessage(nextStep.finalMessage);
