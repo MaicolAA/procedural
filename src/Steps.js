@@ -3,12 +3,15 @@ export const Steps = [
         question: 'Cuenta con Scanner que Permita comprobaciones activas?',
         options: {
             Si: {
+                recommendation: 'Conectar Scanner y Leer fallos',
                 question: 'Presenta código de fallo de encendido en 1 o más cilindros?',
                 options: {
                     'En 1 cilindro': {
+                        recommendation: 'Intercambiar la bobina del cilindro en fallo por la del cilindro recíproco, leer nuevamente fallos',
                         question: 'Se replicó en el mismo cilindro o cambio junto al cilindro que se intercambio la bobina?',
                         options: {
                             'En el mismo': {
+                                recommendation: 'Intercambiar la bujia del cilindro en fallo por la del cilindro recíproco, leer nuevamente fallos',
                                 question: 'El fallo se paso de cilindro?',
                                 options: {
                                     'Si': {
@@ -25,12 +28,14 @@ export const Steps = [
                         },
                     },
                     'En más de 1 cilindro': {
+                        recommendation: 'Intercambiar la bobina del cilindro en fallo por la del cilindro recíproco, leer nuevamente fallos.',
                         question: 'El fallo se replico en los cilindros intercambiados?',
                         options: {
                             'Si': {
                                 finalSolution: 'Remplazar los cilindros con fallos, por cilindro nuevos de buena calidad',
                             },
                             'No': {
+                                recommendation: 'Intercambiar la bujia del cilindro en fallo por la del cilindro recíproco, leer nuevamente fallos',
                                 question: 'El fallo se sigue presentando en los cilindro inicales?',
                                 options: {
                                     'Si': {
