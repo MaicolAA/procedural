@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Steps as steps } from './Steps';
+import { Navbar } from './Navbar';
 import './tailwind.css';
 
 const ExpertSystem = () => {
@@ -42,22 +43,8 @@ const ExpertSystem = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-4 flex flex-col">
-
-      <nav className="mb-[1rem] bg-blue-600 text-white py-3 px-4 sm:py-4 sm:px-6 flex justify-between items-center fixed top-0 left-0 right-0">
-        <h1 className="text-base sm:text-xl font-bold truncate"> 
-          Sistema Experto de Diagnóstico
-        </h1>
-        <a
-          href="/tree.pdf"
-          target="_blank"
-          className="text-sm sm:text-lg hover:underline truncate"
-        >
-          Ver diagrama
-        </a>
-      </nav>
-
-
-      <div className="bg-white mt-[8rem] rounded-lg shadow-lg max-w-md mx-auto"> 
+      <Navbar />
+      <div className="bg-white mt-[8rem] rounded-lg shadow-lg max-w-md mx-auto">
         <h2 className="text-center text-xl font-semibold text-blue-600 mb-2">
           Proyecto de Diagnóstico de Averías
         </h2>
@@ -66,7 +53,7 @@ const ExpertSystem = () => {
         </p>
       </div>
 
-      <div className="flex items-center justify-center bg-gray-100 p-4"> 
+      <div className="flex items-center justify-center bg-gray-100 p-4">
         <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
           <h1 className="text-2xl font-bold text-center text-blue-600 mb-6">Sistema Experto</h1>
 
