@@ -30,6 +30,7 @@ export const Navbar = () => {
                     href="https://github.com/MaicolAA/procedural"
                     target="_blank"
                     className="text-sm sm:text-lg hover:underline truncate"
+                    rel="noopener noreferrer" 
                 >
                     Ver Repositorio Github
                 </a>
@@ -37,6 +38,7 @@ export const Navbar = () => {
                     href="/project.pdf"
                     target="_blank"
                     className="text-sm sm:text-lg hover:underline truncate"
+                    rel="noopener noreferrer" 
                 >
                     Ver Documento descripción
                 </a>
@@ -44,6 +46,7 @@ export const Navbar = () => {
                     href="/tree.pdf"
                     target="_blank"
                     className="text-sm sm:text-lg hover:underline truncate"
+                    rel="noopener noreferrer" 
                 >
                     Ver diagrama
                 </a>
@@ -55,6 +58,7 @@ export const Navbar = () => {
                         href="https://github.com/MaicolAA/procedural"
                         target="_blank"
                         className="text-sm sm:text-lg hover:underline px-4"
+                        rel="noopener noreferrer" 
                     >
                         Ver Github
                     </a>
@@ -62,6 +66,7 @@ export const Navbar = () => {
                         href="/project.pdf"
                         target="_blank"
                         className="text-sm sm:text-lg hover:underline px-4"
+                        rel="noopener noreferrer" 
                     >
                         Ver Repositorio Github
 
@@ -70,6 +75,7 @@ export const Navbar = () => {
                         href="/tree.pdf"
                         target="_blank"
                         className="text-sm sm:text-lg hover:underline px-4"
+                        rel="noopener noreferrer" 
                     >
                         Ver diagrama
                     </a>
